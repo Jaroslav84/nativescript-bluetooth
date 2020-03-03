@@ -338,7 +338,7 @@ Bluetooth._toArrayBuffer = function (value) {
 };
 
 Bluetooth._isEnabled = function () {
-  return Bluetooth._state.manager.state === CBCentralManagerStatePoweredOn;
+  return (Bluetooth._state.manager.state === CBManagerState.PoweredOn || Bluetooth._state.manager.state === CBCentralManagerStatePoweredOn);
 };
 
 //not really required, but still
